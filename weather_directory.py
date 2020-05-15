@@ -21,5 +21,7 @@ def display_weather(weather):
         state = entry['weather_state_name']
         print(f"{date}\t{state}\thigh {high:2.1f}°C\tlow {low:2.1f}°C")
     
-
-        
+def disambiguate_locations(locations):
+    print("Ambiguous location! Did you mean:")
+    for loc in locations:
+        print(f"\t* {loc['title']}")
